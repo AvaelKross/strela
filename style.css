@@ -11,11 +11,17 @@ head,body{
   -ms-backface-visibility:     hidden;
   font-weight: 400;
   -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
   –ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
 
-div, p, a, li, td { -webkit-text-size-adjust:100%; }
+div, p, a, li, td { 
+  -webkit-text-size-adjust:100%; 
+  -moz-text-size-adjust: 100%;
+  –ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
 
 ul {
   list-style: none;
