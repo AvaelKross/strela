@@ -48,6 +48,8 @@ $(document).ready(function() {
   $("#phone1").mask(phonemask);
   $("#phone2").mask(phonemask);
   $("#phone3").mask(phonemask);
+
+  $(".fancybox").fancybox();
   
   function send_data(name, email, phone, form){
     if ($(name).val().length==0) { alert("Пожалуйста, введите своё имя"); return;}
