@@ -17,11 +17,11 @@ $(document).ready(function() {
 
   var videoLink = "http://player.vimeo.com/video/118600750?autoplay=1&color=b4d700&title=0&byline=0&portrait=0";
 
-  $('.video .play').click(function(){
+  $('#video-image').click(function(){
     var embed = $(this).parent().find('.embed');
     $(this).fadeOut('fast');
     embed.html($(this).data('embed')).show();
-    yaCounter28864155.reachGoal('video');
+    yaCounter29229995.reachGoal('video');
     return false;
   })
 
