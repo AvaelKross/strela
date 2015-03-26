@@ -1,8 +1,6 @@
 head,body{
   padding:0px;
   margin: 0px;
-  min-height: 100%;
-  min-width: 1275px;
   width:100%;
   font-family: 'FranklinGothic-Book';
   -webkit-font-smoothing: subpixel-antialiased !important;
@@ -52,7 +50,7 @@ input {
   font-weight: 400;
   color: #9a9a9a;
   font-size: 16px;
-  line-height: 15px;
+  line-height: 13px;
   text-transform: uppercase;
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
@@ -95,7 +93,7 @@ input[type='button'] {
   border-radius: 0px;
   height: 41px;
   cursor: pointer;
-  font-size: 22px;
+  font-size: 18px;
   padding: 10px;
 }
 
@@ -189,7 +187,7 @@ input[type='button'] {
 }
 
 .wrapper {
-  width: 1200px;
+  width: 960px;
   margin: 0px auto;
   position: relative;
 }
@@ -237,20 +235,20 @@ input[type='button'] {
 }
 
 .main-title {
-  font-size: 60px;
+  font-size: 46px;
   font-weight: 700;
 }
 
 .phone {
-  font-size: 36px !important;
+  font-size: 28px !important;
   height: 100px;
-  padding-left: 80px;
+  padding-left: 60px;
   font-weight: 700;
   background: url(images/phone.png) no-repeat;
 }
 
 .subphone {
-  font-size: 25px;
+  font-size: 19px;
   text-decoration: underline;
 }
 
@@ -258,7 +256,7 @@ input[type='button'] {
   background: url(images/main-bg.jpg) no-repeat;
   background-color: white;
   background-position: center;
-  height: 783px;
+  height: 653px;
 }
 
 #main .video {
@@ -277,7 +275,7 @@ input[type='button'] {
 }
 
 .lead-block .form {
-  width: 1000px;
+  width: 960px;
   margin: 0px auto;
 }
 
@@ -289,22 +287,21 @@ input[type='button'] {
 
 .lead-big-title {
   text-transform: none;
-  margin-left: 12px;
-  margin-bottom: 5px;
-  font-size: 36px;
+  margin-bottom: 8px;
+  font-size: 32px;
   color: black;
   font-weight: 500;
   text-align: center;
 }
 
 .lead-block .wrapper {
-  padding: 12px 0px;
+  padding: 10px 0px;
   text-transform: uppercase;
 }
 
 .lead-block input {
   float: left;
-  width: 310px;
+  width: 300px;
   margin: 0px 10px;
   margin-bottom: 0px;
 }
@@ -321,15 +318,16 @@ input[type='button'] {
 
 #infrastructure .inf-logo {
   background: url(images/icons.png) no-repeat;
-  width: 189px;
-  height: 189px;
+  width: 140px;
+  height: 140px;
   margin: 0px auto;
+  margin-top:10px;
 }
 
 #infrastructure .inf-text {
   text-align: center;
   margin: 0px auto;
-  font-size: 24px;
+  font-size: 22px;
 }
 
 #place {
@@ -341,50 +339,52 @@ input[type='button'] {
 #technika {
   background: url(images/tech-bg.jpg) no-repeat;
   background-position: center 130px;
-  height: 1590px;
+  height: 1180px;
 }
 
 .it {
-  font-size: 30px;
-  margin-bottom: 30px;
+  font-size: 22px;
+  margin-bottom: 25px;
   font-weight: 500;
 }
 
 .tech-title {
   background: url(images/container.png) no-repeat;
   height: 79px;
-  padding-left: 130px;
-  padding-top: 95px;
-  font-size: 54px;
+  padding-left: 110px;
+  padding-top: 68px;
+  font-size: 48px;
   margin-top: 50px;
   font-weight: 500;
 }
 
 .tech-text {
-  font-size: 22px;
+  font-size: 16px;
 }
 
 .storage-title {
   background: url(images/storage.png) no-repeat;
-  height: 69px;
+  height: 59px;
   padding-left: 130px;
-  padding-top: 55px;
-  font-size: 54px;
+  padding-top: 61px;
+  font-size: 48px;
+  margin-top: 50px;
   font-weight: 500;
-  margin-top: 0px;
 }
 
 #storage .form-title{
   font-weight: 500;
+  margin-bottom: 16px;
+  font-size: 26px;
 }
 
 .storage-name {
-  font-size: 36px;
+  font-size: 30px;
   margin-top: -80px;
 }
 
 .storage-comments {
-  font-size: 24px;
+  font-size: 18px;
   position: absolute;
 }
 
@@ -405,8 +405,9 @@ input[type='button'] {
 }
 
 #storage input {
-  margin-top: 12px;
-  height: 44px;
+  margin-top: 10px;
+  height: 38px;
+  width: 290px;
 }
 
 #storage .button:active {
@@ -419,20 +420,21 @@ input[type='button'] {
 }
 
 #storage .button {
-  margin-top: 20px;
+  margin-top: 15px;
+  padding:9px;
 }
 
 #storage .button:active {
-  margin-top: 23px;
+  margin-top: 18px;
 }
 
 #pros {
   background-color: #ffb836;
-  height: 326px;
+  height: 300px;
 }
 
 #pros2 {
-  height: 260px;
+  height: 250px;
 }
 
 .prosline .title{
@@ -446,19 +448,19 @@ input[type='button'] {
 }
 
 .pro-title{
-  font-size:32px;
+  font-size:28px;
   text-transform: uppercase;
   font-weight: 700;
 }
 
 .pro-subtitle{
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .review{
   height: 160px;
-  margin-left: 70px;
-  margin-top: 50px;
+  margin-left: 30px;
+  margin-top: 35px;
 }
 
 .review .column {
@@ -469,7 +471,7 @@ input[type='button'] {
   width: 159px;
   height: 159px;
   background: url(images/icons/faces.jpg) no-repeat;
-  margin-right: 30px;
+  margin-right: 20px;
 }
 
 .review-name {
@@ -479,7 +481,7 @@ input[type='button'] {
 
 .review-date {
   float: left;
-  font-size: 18px;
+  font-size: 13px;
   margin-top: 6px;
   margin-left: 5px;
 }
@@ -489,12 +491,16 @@ input[type='button'] {
 }
 
 .review-text, .review-name {
-  font-size: 24px;
+  font-size: 20px;
+}
+
+#write-review .button {
+  width: 250px;
 }
 
 #write-review .button:active {
   margin-top: 18px !important;
-  margin-bottom:-3px;
+  margin-bottom:-3px !important;
 }
 
 #map {
@@ -502,7 +508,7 @@ input[type='button'] {
 }
 
 #map .column {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 #questions input[type="text"]{
