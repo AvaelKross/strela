@@ -2,6 +2,7 @@ head,body{
   padding:0px;
   margin: 0px;
   width:100%;
+  min-width: 1050px;
   font-family: 'FranklinGothic-Book';
   -webkit-font-smoothing: subpixel-antialiased !important;
   -webkit-backface-visibility: hidden;
