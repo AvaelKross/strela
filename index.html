@@ -51,9 +51,9 @@
       <div class="wrapper">
         <div class="lead-big-title">Узнайте стоимость логистики для вашего проекта</div>
         <div class='form'>
-          <input name="name1" id="name" placeholder="Введите имя"/>
-          <input name="phone1" id="phone" placeholder="Введите телефон"/>
-          <input type="submit" class="button button-orange" id="submit_button" value='УЗНАТЬ СТОИМОСТЬ!' onclick="yaCounter29229995.reachGoal('lead-middle');" style="padding: 10px;"/>
+          <input name="name1" id="name1" placeholder="Введите имя"/>
+          <input name="phone1" id="phone1" placeholder="Введите телефон"/>
+          <input type="submit" class="button button-orange" id="submit_button1" value='УЗНАТЬ СТОИМОСТЬ!' onclick="yaCounter29229995.reachGoal('lead-middle');" style="padding: 10px;"/>
           
           <a href='#' class="green openPolitics">Политика конфидециальности</a>
         </div>
@@ -217,10 +217,10 @@
 автотранспорта</div>
         <div class="form" style="position: absolute; top: 570px; left: 28px;">
           <div class="form-title"><b>ПОЛУЧИТЬ ОНЛАЙН ДОСТУП<br>К ВИДЕОНАБЛЮДЕНИЮ</b></div>
-          <input type="text" class="form-input form-name" id="name" placeholder="Введите имя"></input>
-          <input type="text" input-mask class="form-input form-phone" id="phone" placeholder="Введите телефон"></input>
-          <input type="text" class="form-input form-mail" id="email" placeholder="Введите e-mail"></input>
-          <input type="submit" class="button button-blue" id="manager-button" value='ХОЧУ ПОСМОТРЕТЬ!' onclick="yaCounter29229995.reachGoal('lead-map');"/>
+          <input type="text" class="form-input form-name" id="name-video" placeholder="Введите имя"></input>
+          <input type="text" input-mask class="form-input form-phone" id="phone-video" placeholder="Введите телефон"></input>
+          <input type="text" class="form-input form-mail" id="email-video" placeholder="Введите e-mail"></input>
+          <input type="submit" class="button button-blue" id="video-access-button" value='ХОЧУ ПОСМОТРЕТЬ!' onclick="yaCounter29229995.reachGoal('lead-map');"/>
           <a href='#' class="openPolitics" style="color: #aaa; padding-left: 15px;">Политика конфидециальности</a>
         </div>
 
@@ -229,9 +229,9 @@
         <div class="storage-name green">Арочный склад</div>
         <div class="form" style="position: absolute; top: 40; left: 642px;">
           <div class="form-title" style="font-size: 30px; margin-bottom: 20px; margin-top: 10px;"><b>СПЕЦПРЕДЛОЖЕНИЕ<br>НА АРЕНДУ<br>ДО 15 АПРЕЛЯ</b></div>
-          <input type="text" class="form-input form-name" id="name" placeholder="Введите имя"></input>
-          <input type="text" input-mask class="form-input form-phone" id="phone" placeholder="Введите телефон"></input>
-          <input type="submit" class="button button-green" id="manager-button" value='УЗНАТЬ ПОДРОБНОСТИ!' onclick="yaCounter29229995.reachGoal('lead-map');"/>
+          <input type="text" class="form-input form-name" id="name-special-offer" placeholder="Введите имя"></input>
+          <input type="text" input-mask class="form-input form-phone" id="phone-special-offer" placeholder="Введите телефон"></input>
+          <input type="submit" class="button button-green" id="special-offer-button" value='УЗНАТЬ ПОДРОБНОСТИ!' onclick="yaCounter29229995.reachGoal('lead-map');"/>
           <a href='#' class="green openPolitics">Политика конфидециальности</a>
         </div>
         <div class="storage-comments" style="top: 57px; left: 150px;">Общая площадь: 1 400 кв.м.,<br>возможно арендовать по частям. </div>
@@ -366,7 +366,7 @@
       <div class="title" style="margin-left: -10px;">Работали с нами? Напишите свой отзыв!</div>
       <img src="images/icons/pen.png" style="position: absolute; top: -33px; left: 750px;" height="60px">
       <div class="clear" style="clear: both;"></div>
-      <input type="submit" class="button button-green-light" value="НАПИСАТЬ ОТЗЫВ!" style="padding: 8px;  margin: 0px auto;
+      <input type="submit" class="button button-green-light" id="open-review-form" value="НАПИСАТЬ ОТЗЫВ!" style="padding: 8px;  margin: 0px auto;
 "></input>
       <div class="clear" style="clear: both; height: 40px;"></div>
     </div>
@@ -409,9 +409,9 @@
     <div class="lead-block" id="leadblock-main">
       <div class="wrapper">
         <div class='form'>
-          <input type="text" name="name1" id="name" placeholder="Введите имя"/>
-          <input type="text" name="phone1" id="phone" placeholder="Введите телефон"/>
-          <input type="submit" class="button button-orange" id="submit_button" value='УЗНАТЬ СТОИМОСТЬ' onclick="yaCounter29229995.reachGoal('lead-middle');" style="padding: 8px;"/>
+          <input type="text" name="name" id="name_footer" placeholder="Введите имя"/>
+          <input type="text" name="phone" id="phone_footer" placeholder="Введите телефон"/>
+          <input type="submit" class="button button-orange" id="submit_button_footer" value='ОСТАВИТЬ ЗАЯВКУ!' onclick="yaCounter29229995.reachGoal('lead-middle');" style="padding: 8px;"/>
           
           <a href='#' class="green openPolitics">Политика конфидециальности</a>
         </div>
@@ -421,7 +421,7 @@
   </div>
 
   <div class="popup" id="showPolitics">
-    <div class="block video-popup">
+    <div class="block politics-popup">
       Данное соглашение об обработке персональных данных разработано в соответствии с законодательством Российской Федерации.
       <br><br>
       Все лица заполнившие сведения, составляющие персональные данные на данном сайте, а также разместившие иную информацию обозначенными действиями подтверждают свое согласие на обработку персональных данных и их передачу оператору обработки персональных данных.
@@ -443,8 +443,76 @@
   </div>
 
   <div class="popup" id="thanks">
-    <div class="block video-popup" style="padding-top: 30px">
-      Спасибо! Ожидайте звонка.
+    <div class="block">
+      <h5 style="margin-top: 0px;">Ваша заявка успешно<br>отправлена!</h5>
+      <div class="popup-text">Мы свяжемся с вами в течение 15 минут!</div>
+      <h5>благодарим, что обратились<br>к нам!</h5>
+      <img src="images/icons/smile.png" />
+    </div>
+    <div class="closer">
+    </div>
+  </div>
+
+  <div class="popup" id="review-thanks">
+    <div class="block">
+      <img src="images/icons/letter.png" style="position: absolute; left: 22px; top: 34px;">
+      <h5 style="margin-top: 0px;">Ваш отзыв отправился<br>к нам на модерацию.</h5>
+      <div class="popup-text">
+        Если у нас возникнут вопросы мы с Вами<br>
+        свяжемся.<br>
+        Если все ОК, то Ваш отзыв появится у нас<br>
+        на сайте в течени 3 дней.
+      </div>
+      <h5>благодарим, что обратились<br>к нам!</h5>
+      <img src="images/icons/smile.png" />
+    </div>
+    <div class="closer">
+    </div>
+  </div>
+
+  <div class="popup" id="call-me">
+    <div class="block">
+      <h5 style="margin-top: 0px;">Закажите обратный звонок<br>и мы свяжемся с Вами в течение 15 минут.</h5>
+      <div class='form'>
+        <div style="padding-bottom: 20px;">
+          <input name="name1" id="name-call" placeholder="Введите имя"/>
+          <input name="phone1" id="phone-call" placeholder="Введите телефон"/>
+        </div>
+        <input type="submit" class="button button-orange" id="submit-button-call" value='ПЕРЕЗВОНИТЕ МНЕ!' onclick="yaCounter29229995.reachGoal('lead-middle');" style="padding: 10px; display: block;"/>
+      </div>
+    </div>
+    <div class="closer">
+    </div>
+  </div>
+
+  <div class="popup" id="send-review-popup">
+    <div class="block">
+      <div style="font-size: 18px;">Заполните, пожалуйста, немного о себе и напишите свои впечатления о работе с нами!</div>
+      <div class='form' style="margin: 0px auto; margin-top: 10px; width: 700px;">
+        <div class="columns">
+          <div class="column">
+            <input name="name1" id="name-call" placeholder="Имя:"/>
+            <input name="phone1" id="phone-call" placeholder="Телефон:"/>
+            <input name="org" id="org-name" placeholder="Название компании:"/>
+            <input name="when" id="when-worked" placeholder="Когда мы с вами работали:"/>
+          </div>
+          <div class="column" style="margin-left: 20px;">
+            <textarea name="review" id="review-text" placeholder="Отзыв:"></textarea>
+            <div class="columns" style="margin-top: 7px;">
+              <div class="column">
+                <div style="text-align:left; font-size: 16px;">Загрузить фото или<br>лого компании:</div>
+                <input name="file" id="review-file" type="file" onchange="ValidateFileUpload()" style="display:none;"/>
+                <input type="submit" class="button button-yellow" id="open-file" value='ЗАГРУЗИТЬ' style="padding: 10px; width: 159px;"/>
+              </div>
+              <div class="column right">
+                <img src="images/noimg.jpg" id="file-preview" width="120px" height="120px">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clear" style="clear: both; height: 10px;"></div>
+        <input type="submit" class="button button-orange" id="submit-button-call" value='ОТПРАВИТЬ ОТЗЫВ!' onclick="yaCounter29229995.reachGoal('lead-middle');" style="padding: 10px; display: block;"/>
+      </div>
     </div>
     <div class="closer">
     </div>

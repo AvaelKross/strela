@@ -13,6 +13,34 @@ if (key==undefined) {key="Прямой заход";}
 var group = params['group']
 var mail = params['mail']
 
+function ValidateFileUpload() {
+  var fuData = document.getElementById('review-file');
+  var FileUploadPath = fuData.value;
+
+  //To check if user upload any file
+  if (FileUploadPath == '') {
+    alert("Please upload an image");
+
+  } else {
+    var Extension = FileUploadPath.substring(FileUploadPath.lastIndexOf('.') + 1).toLowerCase();
+
+    //The file uploaded is an image
+
+    if (Extension == "gif" || Extension == "png" || Extension == "jpeg" || Extension == "jpg") {
+
+      if (fuData.files && fuData.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+          $('#file-preview').attr('src', e.target.result);
+        }
+        reader.readAsDataURL(fuData.files[0]);
+      }
+    }else{
+      alert("Photo only allows file types of GIF, PNG, JPG, JPEG. ");
+    }
+  }
+}
+
 $(document).ready(function() {
 
   var videoLink = "http://player.vimeo.com/video/118600750?autoplay=1&color=b4d700&title=0&byline=0&portrait=0";
@@ -39,15 +67,25 @@ $(document).ready(function() {
     $("#video-popup").css("display", "block");
   });
 
-  $("#video-popup .closer").on('click', function(){
-    $('#video-popup iframe').attr('src',''); 
-  })
+  $("#open-review-form").on('click', function(){
+    $("#send-review-popup").css("display", "block");
+  });
+
+  $(".subphone").on('click', function(){
+    $("#call-me").css("display", "block");
+  });
+
+  $("#open-file").on('click', function(){
+    $("#review-file").click();
+  });
   
   var phonemask = "+7 (999) 999-99-99"
-  $("#phone").mask(phonemask);
+  $("#phone_footer").mask(phonemask);
   $("#phone1").mask(phonemask);
-  $("#phone2").mask(phonemask);
-  $("#phone3").mask(phonemask);
+  $("#phone_video").mask(phonemask);
+  $("#phone-special-offer").mask(phonemask);
+  $("#phone-call").mask(phonemask);
+  $("#phone-review").mask(phonemask);
 
   $(".fancybox").fancybox();
   
@@ -58,9 +96,9 @@ $(document).ready(function() {
     if ($(email).length>0 && !validateEmail($(email).val())) { alert("Пожалуйста, введите корректный адрес электронной почты"); return;}
     
     var data = { 
-      name: $(name).val(), 
-      email: $(email).val(), 
-      phone: $(phone).val(), 
+      name: $(name).val(),
+      email: $(email).val(),
+      phone: $(phone).val(),
       form: form
     }
     data['utm_content'] = params['utm_content'];
@@ -78,11 +116,14 @@ $(document).ready(function() {
       .done(function( msg ) {
       console.log(msg);
       });
+    $(".popup").css("display", "none");
     $("#thanks").css("display", "block"); 
   }
 
-  $("#submit_button2").on('click', function(){send_data('#name2', '#email2', '#phone2', "Запрос подробностей")});
-  $("#submit_button1").on('click', function(){send_data('#name1', '#email1', '#phone1', "Запрос подробностей")});
-  $("#submit_button3").on('click', function(e){e.preventDefault(); send_data('#name3', '#email3', '#phone3', "Запрос подробностей")});
-  $("#manager-button").on('click', function(){send_data('#name', '#email', '#phone', "консультация менеджера")});
+  $("#submit_button_footer").on('click', function(){send_data('#name_footer', '#24534esfd', '#phone_footer', "Запрос стоимости")});
+  $("#submit_button1").on('click', function(){send_data('#name1', '#24534esfd', '#phone1', "Заявка")});
+  $("#video-access-button").on('click', function(e){e.preventDefault(); send_data('#name_video', '#email_video', '#phone_video', "Запрос доступа к видеонаблюдению")});
+  $("#special-offer-button").on('click', function(){send_data('#name-special-offer', '#3232423df', '#phone-special-offer', "Спецпредложение до 15 апреля")});
+  $("#submit-button-call").on('click', function(){send_data('#name-call', '#3232423df', '#phone-call', "Заказ обратного звонка")});
+  $("#button-review").on('click', function(){send_data('#name-special-offer', '#3232423df', '#phone-special-offer', "Новый отзыв")});
 });
