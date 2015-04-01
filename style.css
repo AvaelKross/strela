@@ -643,3 +643,12 @@ input[type='button'] {
   height:100%;
 }
 
+#file-preview {
+  max-width: 120px;
+  max-height: 120px;
+}
+
+#send-review-popup .button:active {
+  margin-top: 10px !important;
+}
+
