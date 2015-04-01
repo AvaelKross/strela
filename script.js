@@ -144,7 +144,7 @@ $(document).ready(function() {
 
   $("#submit_button_footer").on('click', function(){send_data('#name_footer', '#24534esfd', '#phone_footer', "Заявка - есть вопросы")});
   $("#submit_button1").on('click', function(){send_data('#name1', '#24534esfd', '#phone1', "Запрос стоимости")});
-  $("#video-access-button").on('click', function(e){e.preventDefault(); send_data('#name_video', '#email_video', '#phone_video', "Запрос доступа к видеонаблюдению")});
+  $("#video-access-button").on('click', function(){send_data('#name-video', '#email-video', '#phone-video', "Запрос доступа к видеонаблюдению")});
   $("#special-offer-button").on('click', function(){send_data('#name-special-offer', '#3232423df', '#phone-special-offer', "Спецпредложение до 15 апреля")});
   $("#submit-button-call").on('click', function(){send_data('#name-call', '#3232423df', '#phone-call', "Заказ обратного звонка")});
   $("#button-review").on('click', function(){send_data('#name-review', '#3232423df', '#phone-review', "Новый отзыв")});
