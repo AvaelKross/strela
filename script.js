@@ -95,11 +95,29 @@ $(document).ready(function() {
     if ($(email).length>0 && $(email).val().length==0) { alert("Пожалуйста, введите свой адрес электронной почты"); return;}
     if ($(email).length>0 && !validateEmail($(email).val())) { alert("Пожалуйста, введите корректный адрес электронной почты"); return;}
     
-    var data = { 
-      name: $(name).val(),
-      email: $(email).val(),
-      phone: $(phone).val(),
-      form: form
+    var data = {}
+
+    if (form == "Новый отзыв") {
+      if ($("#org-name").val().length==0) { alert("Пожалуйста, введите название организации"); return;}
+      if ($("#review-text").val().length==0) { alert("Пожалуйста, введите текст отзыва"); return;}
+
+      data = { 
+        name: $(name).val(),
+        email: $(email).val(),
+        phone: $(phone).val(),
+        form: form,
+        org_name: $("#org-name").val(),
+        when: $("#when-worked").val(),
+        review_text: $("#review-text").val(),
+        photo: $('#file-preview').attr('src')
+      }
+    }else{
+      data = { 
+        name: $(name).val(),
+        email: $(email).val(),
+        phone: $(phone).val(),
+        form: form
+      }
     }
     data['utm_content'] = params['utm_content'];
     data['utm_campaign'] = params['utm_campaign'];
@@ -117,13 +135,17 @@ $(document).ready(function() {
       console.log(msg);
       });
     $(".popup").css("display", "none");
-    $("#thanks").css("display", "block"); 
+    if (form == "Новый отзыв") {
+      $("#review-thanks").css("display", "block");
+    }else{
+      $("#thanks").css("display", "block");
+    }
   }
 
-  $("#submit_button_footer").on('click', function(){send_data('#name_footer', '#24534esfd', '#phone_footer', "Запрос стоимости")});
-  $("#submit_button1").on('click', function(){send_data('#name1', '#24534esfd', '#phone1', "Заявка")});
+  $("#submit_button_footer").on('click', function(){send_data('#name_footer', '#24534esfd', '#phone_footer', "Заявка - есть вопросы")});
+  $("#submit_button1").on('click', function(){send_data('#name1', '#24534esfd', '#phone1', "Запрос стоимости")});
   $("#video-access-button").on('click', function(e){e.preventDefault(); send_data('#name_video', '#email_video', '#phone_video', "Запрос доступа к видеонаблюдению")});
   $("#special-offer-button").on('click', function(){send_data('#name-special-offer', '#3232423df', '#phone-special-offer', "Спецпредложение до 15 апреля")});
   $("#submit-button-call").on('click', function(){send_data('#name-call', '#3232423df', '#phone-call', "Заказ обратного звонка")});
-  $("#button-review").on('click', function(){send_data('#name-special-offer', '#3232423df', '#phone-special-offer', "Новый отзыв")});
+  $("#button-review").on('click', function(){send_data('#name-review', '#3232423df', '#phone-review', "Новый отзыв")});
 });

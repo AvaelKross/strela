@@ -289,7 +289,6 @@ input[type='button'] {
 #main .video {
   width: 500px;
   height: 311px;
-  background: url(images/video.png);
   margin-top: -10px;
   text-align: center;
   float: left;
