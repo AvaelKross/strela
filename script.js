@@ -82,7 +82,7 @@ $(document).ready(function() {
   var phonemask = "+7 (999) 999-99-99"
   $("#phone_footer").mask(phonemask);
   $("#phone1").mask(phonemask);
-  $("#phone_video").mask(phonemask);
+  $("#phone-video").mask(phonemask);
   $("#phone-special-offer").mask(phonemask);
   $("#phone-call").mask(phonemask);
   $("#phone-review").mask(phonemask);
